@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+main p {
+  @apply mb-4 leading-6;
+}
+
+main strong {
+  @apply text-slate-100;
+}
+
+.gradient-accent {
+  @apply text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-purple-500;
+}
+
+[id] {
+  scroll-margin-top: 100px; /* Adjust this value as needed */
+}
+
+.blog-list p {
+  @apply !line-clamp-2 !text-slate-350 !leading-normal !mb-0;
+}
+
+/* Markdown */
+.article-content h1,
+.article-content h2,
+.article-content h3 {
+  @apply text-lg font-semibold text-slate-100 mt-6 mb-2;
+}
+
+.article-content h4,
+.article-content h5,
+.article-content h6 {
+  @apply text-sm font-semibold text-slate-200 mt-6 mb-2;
+}
+
+.article-content a {
+  @apply text-blue-400 underline hover:text-pink-400 transition-all;
+}
+
+.article-content strong {
+  @apply font-medium;
+}
+
+.article-content ul {
+  @apply list-disc list-inside ml-5;
+}
+
+.article-content li {
+  @apply mb-2 text-slate-350;
+}
+
+.article-content pre.wp-block-preformatted {
+  @apply rounded-lg overflow-hidden mt-2 mb-4;
+}
+
+.article-content pre code {
+  @apply !p-4 rounded-lg font-mono text-xs overflow-auto block;
+}
+
+.article-content hr {
+  @apply border-slate-500 border w-full my-4;
+}
+
+.article-content p {
+  @apply mb-2;
+}
+
+.article-content figure {
+  @apply rounded-sm max-w-[80%] w-fit mx-auto relative mb-2;
+}
+
+.article-content img {
+  @apply mx-auto;
+}
+
+.article-content figcaption {
+  @apply text-slate-350 text-[10px] mb-2 text-center italic;
+}
+
+.article-content .invert img {
+  @apply !invert;
+}
+
+/* Scrollbar */
+
+/* Optional: Custom styling for the scrollbar if you ever want it back */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #444; /* Dark scrollbar thumb */
+  border-radius: 10px;
+}
